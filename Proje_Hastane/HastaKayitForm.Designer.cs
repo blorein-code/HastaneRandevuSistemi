@@ -32,8 +32,6 @@
             this.tcLabel = new System.Windows.Forms.TextBox();
             this.sifreLabel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.telefonLabel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.kayitOlButton = new System.Windows.Forms.Button();
+            this.cinsiyetCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,14 +58,14 @@
             this.tcLabel.Location = new System.Drawing.Point(291, 72);
             this.tcLabel.Name = "tcLabel";
             this.tcLabel.Size = new System.Drawing.Size(111, 20);
-            this.tcLabel.TabIndex = 1;
+            this.tcLabel.TabIndex = 4;
             // 
             // sifreLabel
             // 
             this.sifreLabel.Location = new System.Drawing.Point(291, 112);
             this.sifreLabel.Name = "sifreLabel";
             this.sifreLabel.Size = new System.Drawing.Size(111, 20);
-            this.sifreLabel.TabIndex = 3;
+            this.sifreLabel.TabIndex = 5;
             // 
             // label2
             // 
@@ -76,28 +75,6 @@
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Şifre:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(291, 155);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 17);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(350, 155);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(52, 17);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -114,7 +91,7 @@
             this.telefonLabel.Location = new System.Drawing.Point(89, 154);
             this.telefonLabel.Name = "telefonLabel";
             this.telefonLabel.Size = new System.Drawing.Size(100, 20);
-            this.telefonLabel.TabIndex = 18;
+            this.telefonLabel.TabIndex = 3;
             // 
             // label5
             // 
@@ -130,7 +107,7 @@
             this.soyadLabel.Location = new System.Drawing.Point(89, 115);
             this.soyadLabel.Name = "soyadLabel";
             this.soyadLabel.Size = new System.Drawing.Size(100, 20);
-            this.soyadLabel.TabIndex = 16;
+            this.soyadLabel.TabIndex = 2;
             // 
             // label4
             // 
@@ -146,7 +123,7 @@
             this.hastaAdLabel.Location = new System.Drawing.Point(89, 72);
             this.hastaAdLabel.Name = "hastaAdLabel";
             this.hastaAdLabel.Size = new System.Drawing.Size(100, 20);
-            this.hastaAdLabel.TabIndex = 14;
+            this.hastaAdLabel.TabIndex = 1;
             // 
             // label3
             // 
@@ -177,12 +154,21 @@
             this.kayitOlButton.UseVisualStyleBackColor = true;
             this.kayitOlButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cinsiyetCombo
+            // 
+            this.cinsiyetCombo.FormattingEnabled = true;
+            this.cinsiyetCombo.Location = new System.Drawing.Point(291, 153);
+            this.cinsiyetCombo.Name = "cinsiyetCombo";
+            this.cinsiyetCombo.Size = new System.Drawing.Size(111, 21);
+            this.cinsiyetCombo.TabIndex = 21;
+            // 
             // HastaKayitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(437, 240);
+            this.Controls.Add(this.cinsiyetCombo);
             this.Controls.Add(this.kayitOlButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.telefonLabel);
@@ -192,8 +178,6 @@
             this.Controls.Add(this.hastaAdLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.sifreLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tcLabel);
@@ -211,8 +195,6 @@
         private System.Windows.Forms.TextBox tcLabel;
         private System.Windows.Forms.TextBox sifreLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox telefonLabel;
         private System.Windows.Forms.Label label5;
@@ -222,5 +204,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button kayitOlButton;
+        private System.Windows.Forms.ComboBox cinsiyetCombo;
     }
 }

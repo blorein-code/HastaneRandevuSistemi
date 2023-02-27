@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisForm));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.hastaGirisButon = new System.Windows.Forms.Button();
+            this.doktorGirisButon = new System.Windows.Forms.Button();
+            this.sekreterGirisButon = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,38 +40,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // hastaGirisButon
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(13, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 87);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.hastaGirisButon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hastaGirisButon.BackgroundImage")));
+            this.hastaGirisButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.hastaGirisButon.Location = new System.Drawing.Point(13, 151);
+            this.hastaGirisButon.Name = "hastaGirisButon";
+            this.hastaGirisButon.Size = new System.Drawing.Size(124, 87);
+            this.hastaGirisButon.TabIndex = 4;
+            this.hastaGirisButon.UseVisualStyleBackColor = true;
+            this.hastaGirisButon.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // doktorGirisButon
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(179, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 87);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.doktorGirisButon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doktorGirisButon.BackgroundImage")));
+            this.doktorGirisButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.doktorGirisButon.Location = new System.Drawing.Point(179, 151);
+            this.doktorGirisButon.Name = "doktorGirisButon";
+            this.doktorGirisButon.Size = new System.Drawing.Size(127, 87);
+            this.doktorGirisButon.TabIndex = 5;
+            this.doktorGirisButon.UseVisualStyleBackColor = true;
+            this.doktorGirisButon.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // sekreterGirisButon
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(335, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 87);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.sekreterGirisButon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sekreterGirisButon.BackgroundImage")));
+            this.sekreterGirisButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sekreterGirisButon.Location = new System.Drawing.Point(335, 151);
+            this.sekreterGirisButon.Name = "sekreterGirisButon";
+            this.sekreterGirisButon.Size = new System.Drawing.Size(114, 87);
+            this.sekreterGirisButon.TabIndex = 6;
+            this.sekreterGirisButon.UseVisualStyleBackColor = true;
+            this.sekreterGirisButon.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -122,7 +122,7 @@
             this.label4.Text = "Lucky Life Hospital";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // Form1
+            // GirisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,10 +133,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.sekreterGirisButon);
+            this.Controls.Add(this.doktorGirisButon);
+            this.Controls.Add(this.hastaGirisButon);
+            this.Name = "GirisForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -146,9 +146,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button hastaGirisButon;
+        private System.Windows.Forms.Button doktorGirisButon;
+        private System.Windows.Forms.Button sekreterGirisButon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
