@@ -16,5 +16,11 @@ namespace Proje_Hastane
         {
             InitializeComponent();
         }
+
+        public string tcNo;
+        private void HastaBilgiDuzenle_Load(object sender, EventArgs e)
+        {
+            tcLabel.Text = tcNo;
+        }
     }
 }

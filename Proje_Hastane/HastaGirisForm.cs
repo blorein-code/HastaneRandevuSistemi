@@ -24,19 +24,21 @@ namespace Proje_Hastane
 
         }
 
-        SqlBaglanti sqlBaglanti= new SqlBaglanti();
+        SqlBaglanti sqlBaglanti = new SqlBaglanti();
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            SqlCommand girisYap = new SqlCommand("Select * From Tbl_Hastalar Where HastaTC=@p1 and HastaSifre=@p2",sqlBaglanti.baglanti());
-            girisYap.Parameters.AddWithValue("@p1",tcNoLabel.Text);
+            SqlCommand girisYap = new SqlCommand("Select * From Tbl_Hastalar Where HastaTC=@p1 and HastaSifre=@p2", sqlBaglanti.baglanti());
+            girisYap.Parameters.AddWithValue("@p1", tcNoLabel.Text);
             girisYap.Parameters.AddWithValue("@p2", sifreLabel.Text);
             SqlDataReader reader = girisYap.ExecuteReader();
 
             if (reader.Read())
             {
                 HastaDetayForm girisBasarili = new HastaDetayForm();
+                girisBasarili.tc = tcNoLabel.Text;
+
                 girisBasarili.Show();
                 this.Hide();
             }
@@ -47,7 +49,7 @@ namespace Proje_Hastane
 
             sqlBaglanti.baglanti().Close();
 
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
