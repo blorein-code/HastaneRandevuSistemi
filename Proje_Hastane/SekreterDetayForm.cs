@@ -79,21 +79,21 @@ namespace Proje_Hastane
         private void doktorPanel_Click(object sender, EventArgs e)
         {
             DoktorPanelForm doktorPanel = new DoktorPanelForm();
-            this.Hide();
+            //this.Hide();
             doktorPanel.Show();
         }
 
         private void bransPanel_Click(object sender, EventArgs e)
         {
             BransPanelForm bransPanel = new BransPanelForm();
-            this.Hide();
+           // this.Hide();
             bransPanel.Show();
         }
 
         private void randevuListe_Click(object sender, EventArgs e)
         {
             RandevuListeForm randevuPanel = new RandevuListeForm();
-            this.Hide();
+            //this.Hide();
             randevuPanel.Show();
         }
 
@@ -131,6 +131,21 @@ namespace Proje_Hastane
             bgln.baglanti() .Close();
             MessageBox.Show("Randevu Oluşturulmuştur.");
 
+
+        }
+
+        private void olusturButon_Click(object sender, EventArgs e)
+        {
+            SqlCommand komutEkle = new SqlCommand("insert into Tbl_Duyurular (Duyuru) values (@p1)",bgln.baglanti());
+
+            komutEkle.Parameters.AddWithValue("@p1",duyuruText.Text);
+            komutEkle.ExecuteNonQuery();
+
+            bgln.baglanti().Close();
+
+            MessageBox.Show("Duyuru Oluşturuldu.");
+
+            duyuruText.Text = "";
 
         }
     }

@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.olusturButon = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.duyuruText = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.guncelleButon = new System.Windows.Forms.Button();
             this.kaydetButon = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.olusturButon);
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.duyuruText);
             this.groupBox2.Location = new System.Drawing.Point(12, 139);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(219, 209);
@@ -138,14 +138,15 @@
             this.olusturButon.TabIndex = 1;
             this.olusturButon.Text = "Oluştur";
             this.olusturButon.UseVisualStyleBackColor = true;
+            this.olusturButon.Click += new System.EventHandler(this.olusturButon_Click);
             // 
-            // richTextBox1
+            // duyuruText
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 33);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(207, 129);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.duyuruText.Location = new System.Drawing.Point(6, 33);
+            this.duyuruText.Name = "duyuruText";
+            this.duyuruText.Size = new System.Drawing.Size(207, 129);
+            this.duyuruText.TabIndex = 0;
+            this.duyuruText.Text = "";
             // 
             // groupBox3
             // 
@@ -426,7 +427,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button olusturButon;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox duyuruText;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MaskedTextBox saatText;
         private System.Windows.Forms.MaskedTextBox tarihText;
