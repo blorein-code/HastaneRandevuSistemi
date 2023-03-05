@@ -52,6 +52,7 @@
             this.bilgiGuncelleButton.TabIndex = 35;
             this.bilgiGuncelleButton.Text = "Bilgi Güncelle";
             this.bilgiGuncelleButton.UseVisualStyleBackColor = true;
+            this.bilgiGuncelleButton.Click += new System.EventHandler(this.bilgiGuncelleButton_Click);
             // 
             // label7
             // 
