@@ -24,9 +24,19 @@ namespace Proje_Hastane
 
         private void randevuAlButton_Click(object sender, EventArgs e)
         {
+            SqlCommand randevuKomut = new SqlCommand("Update Tbl_Randevular set RandevuDurum=1,HastaTC=@p1,HastaSikayet=@p2 where RandevuId=@p3",bgln.baglanti());
+
+            randevuKomut.Parameters.AddWithValue("@p1",tcLabel.Text);
+            randevuKomut.Parameters.AddWithValue("@p2", sikayetText.Text);
+            randevuKomut.Parameters.AddWithValue("@p3",idText.Text);
+
+            randevuKomut.ExecuteNonQuery();
+            bgln.baglanti().Close();
+
+            MessageBox.Show("Randevu Alınmıştır.");
 
         }
-
+        
 
 
         private void HastaDetayForm_Load(object sender, EventArgs e)
@@ -75,7 +85,7 @@ namespace Proje_Hastane
             //Branş ve doktor seçildikten sonra bunlarla ilişkili olan randevular listelenecek
 
             DataTable randevuTable = new DataTable();
-            SqlDataAdapter randevuDataAdapter = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + bransCombo.Text + "'", bgln.baglanti());
+            SqlDataAdapter randevuDataAdapter = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + bransCombo.Text + "'" + " and RandevuDoktor='" + doktorCombo.Text + "' and RandevuDurum=0", bgln.baglanti());
 
             randevuDataAdapter.Fill(randevuTable);
 
@@ -110,6 +120,13 @@ namespace Proje_Hastane
             HastaBilgiDuzenle hastaBilgiDuzenle = new HastaBilgiDuzenle();
             hastaBilgiDuzenle.tcNo = tcLabel.Text;
             hastaBilgiDuzenle.Show();
+        }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+
+            idText.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
         }
     }
 }

@@ -148,5 +148,16 @@ namespace Proje_Hastane
             duyuruText.Text = "";
 
         }
+
+        private void guncelleButon_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void duyuruBtn_Click(object sender, EventArgs e)
+        {
+            DuyurularForm duyurularForm = new DuyurularForm();
+            duyurularForm.Show();
+        }
     }
 }

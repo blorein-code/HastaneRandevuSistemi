@@ -102,6 +102,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DoktorGirisForm";
             this.Text = "DoktorGirisForm";
+            this.Load += new System.EventHandler(this.DoktorGirisForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

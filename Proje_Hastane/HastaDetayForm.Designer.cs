@@ -34,6 +34,9 @@
             this.tcLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bilgiLabel = new System.Windows.Forms.LinkLabel();
+            this.idText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.randevuAlButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.sikayetText = new System.Windows.Forms.RichTextBox();
@@ -45,9 +48,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.idText = new System.Windows.Forms.TextBox();
-            this.bilgiLabel = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,6 +123,33 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
+            // 
+            // bilgiLabel
+            // 
+            this.bilgiLabel.AutoSize = true;
+            this.bilgiLabel.Location = new System.Drawing.Point(6, 274);
+            this.bilgiLabel.Name = "bilgiLabel";
+            this.bilgiLabel.Size = new System.Drawing.Size(68, 13);
+            this.bilgiLabel.TabIndex = 12;
+            this.bilgiLabel.TabStop = true;
+            this.bilgiLabel.Text = "Bilgi Düzenle";
+            this.bilgiLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bilgiLabel_LinkClicked);
+            // 
+            // idText
+            // 
+            this.idText.Location = new System.Drawing.Point(79, 41);
+            this.idText.Name = "idText";
+            this.idText.Size = new System.Drawing.Size(136, 20);
+            this.idText.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Id:";
             // 
             // randevuAlButton
             // 
@@ -224,33 +251,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(509, 189);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Id:";
-            // 
-            // idText
-            // 
-            this.idText.Location = new System.Drawing.Point(79, 41);
-            this.idText.Name = "idText";
-            this.idText.Size = new System.Drawing.Size(136, 20);
-            this.idText.TabIndex = 11;
-            // 
-            // bilgiLabel
-            // 
-            this.bilgiLabel.AutoSize = true;
-            this.bilgiLabel.Location = new System.Drawing.Point(6, 274);
-            this.bilgiLabel.Name = "bilgiLabel";
-            this.bilgiLabel.Size = new System.Drawing.Size(68, 13);
-            this.bilgiLabel.TabIndex = 12;
-            this.bilgiLabel.TabStop = true;
-            this.bilgiLabel.Text = "Bilgi Düzenle";
-            this.bilgiLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bilgiLabel_LinkClicked);
+            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // HastaDetayForm
             // 

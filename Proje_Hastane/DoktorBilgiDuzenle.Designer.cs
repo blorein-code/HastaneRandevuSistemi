@@ -171,6 +171,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DoktorBilgiDuzenle";
             this.Text = "DoktorBilgiDuzenle";
+            this.Load += new System.EventHandler(this.DoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

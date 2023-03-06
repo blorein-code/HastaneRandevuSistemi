@@ -47,6 +47,7 @@
             this.guncelleButon.TabIndex = 45;
             this.guncelleButon.Text = "Güncelle";
             this.guncelleButon.UseVisualStyleBackColor = true;
+            this.guncelleButon.Click += new System.EventHandler(this.guncelleButon_Click);
             // 
             // silButon
             // 
@@ -56,6 +57,7 @@
             this.silButon.TabIndex = 44;
             this.silButon.Text = "Sil";
             this.silButon.UseVisualStyleBackColor = true;
+            this.silButon.Click += new System.EventHandler(this.silButon_Click);
             // 
             // ekleButon
             // 
@@ -65,14 +67,17 @@
             this.ekleButon.TabIndex = 43;
             this.ekleButon.Text = "Ekle";
             this.ekleButon.UseVisualStyleBackColor = true;
+            this.ekleButon.Click += new System.EventHandler(this.ekleButon_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(224, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(265, 115);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // bransAdText
             // 
@@ -110,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(493, 135);
             this.Controls.Add(this.guncelleButon);
             this.Controls.Add(this.silButon);
@@ -121,6 +127,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BransPanelForm";
             this.Text = "BransPanelForm";
+            this.Load += new System.EventHandler(this.BransPanelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

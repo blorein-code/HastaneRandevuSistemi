@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Proje_Hastane
 {
@@ -15,6 +17,24 @@ namespace Proje_Hastane
         public DuyurularForm()
         {
             InitializeComponent();
+        }
+
+        SqlBaglanti bgln = new SqlBaglanti();
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+        }
+
+        private void DuyurularForm_Load(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select Duyuru From Tbl_Duyurular", bgln.baglanti());
+
+
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+
         }
     }
 }

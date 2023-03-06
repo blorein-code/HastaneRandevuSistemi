@@ -34,11 +34,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(831, 486);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // RandevuListeForm
             // 
@@ -48,6 +50,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "RandevuListeForm";
             this.Text = "RandevuListeForm";
+            this.Load += new System.EventHandler(this.RandevuListeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
